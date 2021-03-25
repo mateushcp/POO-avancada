@@ -131,4 +131,56 @@ caixa
 
 ![image](https://user-images.githubusercontent.com/56733190/112527558-f378a600-8d81-11eb-81c1-dd3f2ac4250b.png)
 
+ARRANJOS LIMITADOS 
+
+
+
+* Índice não inicializado: esse erro ocorre quando o método get é invocado sobre um índice que ainda não recebeu qualquer elemento. Quando esta exceção é lançada, o código tratador deve exibir a seguinte mensagem : "Erro: indice nao inicializado."  (Perceba que existe um ponto ao final da mensagem).
+
+* Índice negativo: esse erro ocorre quando os métodos get e set são invocados com um índice negativo.  Quando esta exceção é lançada, o código tratador deve exibir a seguinte mensagem: "Erro: indice negativo.".
+
+* Índice maior que arranjo: esse erro ocorre quando os métodos get e set são invocados com um índice maior ou igual ao parâmetro N da classe. Quando esta exceção é lançada, o código tratador deve exibir a seguinte a mensagem: "Erro: indice maior que arranjo."
+
+Para testar seu programa, você deve usar o programa abaixo, que já está implementado no arquivo main.cpp. 
+
+#include<iostream>
+
+template <class T> void testArray() {
+  BoundedArray<T, 8> a;
+  char action;
+  while (std::cin >> action) {
+    int index;
+    std::cin >> index;
+    try {
+      if (action == 's') {
+        T value;
+        std::cin >> value;
+        a.set(index, value);
+      } else if (action == 'g') {
+        std::cout << a.get(index) << std::endl;
+      }
+    } catch (...) {
+      std::cerr << "Erro desconhecido." << std::endl;
+    }
+  }
+}
+
+
+
+int main() {
+  char type;
+  std::cin >> type;
+  switch(type) {
+    case 'd':
+      testArray<double>();
+      break;
+    case 'i':
+      testArray<int>();
+      break;
+    case 's':
+      testArray<std::string>();
+      break;
+  }
+  return 0;
+}
 
