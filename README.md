@@ -1,4 +1,9 @@
+# C-POO-avan-ada
+
+FILA EM C++
+
 DECORADOR DE FORMAS
+
 CorDecorator adiciona uma cor a forma. Como não iremos fazer o desenho, o efeito desse método deve ser adicionar uma linha ao arquivo de saída com o seguinte formato " - cor: ?" onde a interrogação é uma cor parametrizada.
 OpacidadeDecorator adiciona possíveis opacidades a forma. Como não iremos fazer o desenho, o efeito desse método deve ser adicionar uma linha ao arquivo de saída com o seguinte formato "  - opacidade: ?" onde a interrogação é parametrizada seguindo as especificações do OpacidadeDecorator.hpp .:  * Para valores de 0 a 0.33 (inclusive) a opacidade deve receber valor "baixa"
    * Para valores de 0.33 a 0.66 (inclusive), a opacidade deve receber valor "média"
@@ -125,4 +130,5 @@ caixa
 
 
 ![image](https://user-images.githubusercontent.com/56733190/112527558-f378a600-8d81-11eb-81c1-dd3f2ac4250b.png)
-# C-POO-avan-ada
+
+
